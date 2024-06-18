@@ -8,7 +8,7 @@ library(plumber)
 #* @param c Terceiro número;
 #* @get /media_tres_numeros
 
-media_tres_numeros <- function(a, b, c) {
+function(a, b, c) {
 
   a <- as.numeric(a)
   b <- as.numeric(b)
