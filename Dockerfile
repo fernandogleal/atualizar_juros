@@ -4,6 +4,4 @@ COPY calculos_fin_FGL.R /
 
 EXPOSE 8000/tcp
 
-CMD ["/calculos_fin_FGL.R"]
-
-
+CMD ["R/calculos_fin_FGL.R"]
