@@ -1,7 +1,7 @@
 FROM rstudio/plumber
 
-COPY exemplo_api.R /
+COPY calculos_fin_FGL.R /
 
 EXPOSE 8000/tcp
 
-CMD ["/exemplo_api.R"]
+CMD ["/calculos_fin_FGL.R"]
