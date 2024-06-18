@@ -2,6 +2,23 @@ library(plumber)
 
 #* @apiTitle Cálculos Financeiros FGL
 
+#* Recebendo 3 números, será calculada a média simples entre eles.
+#* @param a Primeiro número;
+#* @param b Segundo número;
+#* @param c Terceiro número;
+#* @get /media_tres_numeros
+
+media_tres_numeros <- function(a, b, c) {
+
+  a <- as.numeric(a)
+  b <- as.numeric(b)
+  c <- as.numeric(c)
+
+  media <- (a + b + c) / 3
+
+    return(media)
+  }
+
 #* Informar que o valor será corrigido pelo CDI ou pela SELIC
 #* @param valor O valor a ser corrigido.
 #* @param dtInicio A data inicial para correção, no formato DD/MM/AAAA
@@ -64,24 +81,6 @@ valor_corrigido <- formatC(round(df$ValorAtualizado,2), format = "f", digits = 2
 print(glue::glue("R$ {valor}, após correção pelo índice {toupper(indice)} no intervalo de {format(dtInicio, '%d/%m/%Y')} a {format(dtFim, '%d/%m/%Y')}, resultou no valor atualizado de R$ {valor_corrigido}."))
 
 }
-
-#* Recebendo 3 números, será calculada a média simples entre eles.
-#* @param a Primeiro número;
-#* @param b Segundo número;
-#* @param c Terceiro número;
-#* @get /media_tres_numeros
-
-media_tres_numeros <- function(a, b, c) {
-
-  a <- as.numeric(a)
-  b <- as.numeric(b)
-  c <- as.numeric(c)
-
-  media <- (a + b + c) / 3
-
-    return(media)
-  }
-
 
 
 
