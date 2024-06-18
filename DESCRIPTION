@@ -1,0 +1,17 @@
+Package: API_atualizar_juros
+Title: API para atualizar um valor pelo CDI ou pela SELIC
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Fernando",
+           family = "Leal",
+           role = c("aut", "cre"),
+           email = "fernandoguerraleal@gmail.com")
+Description: Recebe um valor e uma data e atualiza o valor pela taxa de juros do CDI ou da SELIC. A taxa de juros é obtida através da API do Banco Central do Brasil.
+License: MIT + file LICENSE
+Imports: 
+    config (>= 0.3.2),
+    golem (>= 0.4.1),
+    shiny (>= 1.8.1.1)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
