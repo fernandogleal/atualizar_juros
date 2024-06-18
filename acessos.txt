@@ -1,0 +1,5 @@
+Driver = "ODBC Driver 17 for SQL Server", 
+Server = "aixsql.database.windows.net", 
+Database = "AIX_DW",
+uid = "aixsqladmin",
+pwd = "RcVZz$y6tJPv!n",
