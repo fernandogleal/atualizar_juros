@@ -23,4 +23,6 @@ COPY calculos_fin_FGL.R /
 EXPOSE 8000/tcp
 
 # Run calculos_fin_FGL.R when the container launches
-CMD ["/calculos_fin_FGL.R"]
+# CMD ["/calculos_fin_FGL.R"]
+CMD ["R", "-e", "r <- plumber::plumb('/app/calculos_fin_FGL.R'); r$run(host='0.0.0.0', port=8000)"]
+
